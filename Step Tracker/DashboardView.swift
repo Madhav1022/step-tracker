@@ -70,19 +70,19 @@ struct DashboardView: View {
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
                     
                     VStack(alignment:.leading){
-                            VStack(alignment: .leading){
-                                Label("Averages", systemImage: "calendar")
-                                    .font(.title3.bold())
-                                    .foregroundColor(.pink)
-                                
-                                Text("Last 28 Days")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
+                        VStack(alignment: .leading){
+                            Label("Averages", systemImage: "calendar")
+                                .font(.title3.bold())
+                                .foregroundColor(.pink)
+                            
+                            Text("Last 28 Days")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
                         }
                         .padding(.bottom,12)
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(.secondary)
-                                .frame(height: 240)
+                        RoundedRectangle(cornerRadius: 12)
+                            .foregroundStyle(.secondary)
+                            .frame(height: 240)
                     }
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
@@ -90,7 +90,6 @@ struct DashboardView: View {
             }
             .padding()
             .task {
-                //await hkManager.addSimulatorData()
                 isShowingPermissionPrimingSheet = !hasSeenPermissionPriming
             }
             .navigationTitle("Dashboard")
